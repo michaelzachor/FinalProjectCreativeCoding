@@ -1,6 +1,24 @@
 class Game {
   Game() {
   }
+  void bg() {
+    noStroke();
+    fill(255, 150, 150);
+    rect(0, 0, width, height/2);
+    fill(150, 150, 255);
+    rect(0, height/2, width, height/2);
+  }
+  
+  void bg2() {
+    noStroke();
+    fill(255, 150, 150);
+    rect(0, 0, width, height/3);
+    fill(150, 150, 255);
+    rect(0, height/3, width, height/3);
+    fill(150, 255, 150);
+    rect(0, 2*height/3, width, height/3);
+  }
+  
   void elevatorDoor(float l1_px, float l1_py, int l1_h, color l1_c, color s) {
     stroke(s);
     strokeWeight(4);
@@ -25,13 +43,6 @@ class Game {
     textSize(20);
     fill(0);
     text("Level 1", 220, 20);
-//    text("Elevator 1: ", 10, 20);
-    //text("Floor 1: ",);
-    //text("Floor 2: ");
-    //text("Elevator 2: ");
-    //text("Floor 1: ");
-    //text("Floor 2: ");
-//    text("Score: ", 10, 40);
-//    text("Goal: ", 10, 60);
+    text("Score: " + points, 10, 40);
   }
 }
